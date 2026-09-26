@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="مونديال بي مينريت صيف 2026 — القديس يوحنا الحبيب وإثبات لاهوت السيد المسيح" />
+<meta name="theme-color" content="#060b1f" />
+<title>مونديال بي مينريت — صيف 2026</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lalezar&family=Almarai:wght@300;400;700;800&family=Amiri:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- ===== Background ===== -->
+<div class="bg-layer" aria-hidden="true">
+  <div class="gradient-mesh"></div>
+  <div class="orb orb-1"></div>
+  <div class="orb orb-2"></div>
+  <div class="orb orb-3"></div>
+  <div class="orb orb-4"></div>
+  <canvas id="particles"></canvas>
+  <div class="noise"></div>
+</div>
+
+<!-- ===== Navbar ===== -->
+<header class="navbar" id="navbar">
+  <div class="nav-container">
+    <a href="#hero" class="nav-logo">
+      <span class="logo-cross">✝</span>
+      <span class="logo-text">بي مينريت</span>
+      <span class="logo-year">2026</span>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="#hero" class="nav-link active">الرئيسية</a>
+      <a href="#about" class="nav-link">عن المونديال</a>
+      <a href="#curriculum" class="nav-link">المنهج</a>
+      <a href="#john" class="nav-link">إنجيل يوحنا</a>
+      <a href="#competitions" class="nav-link">المسابقات</a>
+      <a href="#coptic" class="nav-link">القبطية</a>
+      <a href="#memorization" class="nav-link">المحفوظات</a>
+      <a href="#dashboard" class="nav-link">لوحتي</a>
+    </nav>
+    <div class="nav-actions">
+      <button id="searchBtn" class="icon-btn" aria-label="بحث">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+      </button>
+      <button id="themeToggle" class="icon-btn" aria-label="تبديل الوضع">
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></svg>
+      </button>
+      <button id="menuBtn" class="icon-btn menu-btn" aria-label="القائمة">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ===== Search ===== -->
+<div class="search-overlay" id="searchOverlay">
+  <div class="search-box glass-strong">
+    <div class="search-box-header">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="search-icon"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+      <input type="text" id="searchInput" placeholder="ابحث عن درس، مسابقة، إصحاح، حرف قبطي، كلمة..." />
+      <button id="closeSearch" class="icon-btn">✕</button>
+    </div>
+    <div id="searchResults" class="search-results">
+      <div class="search-hint">ابدأ الكتابة للبحث في المنهج والمسابقات واللغة القبطية...</div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== Hero ===== -->
+<section id="hero" class="hero">
+  <div class="hero-content">
+    <div class="hero-badge glass">
+      <span class="pulse-dot"></span>
+      <span>مركز خدمة إعدادي بالمنيا · الإيبارشية</span>
+    </div>
+    <h1 class="hero-title">
+      <span class="grad-text">مونديال بي مينريت</span>
+      <span class="hero-year">صيف 2026</span>
+    </h1>
+    <p class="hero-subtitle">
+      <span class="hero-sub-line"></span>
+      القديس يوحنا الحبيب · إثبات لاهوت السيد المسيح
+    </p>
+    <p class="hero-desc">
+      المونديال الثاني والعشرون — رحلة تعليمية روحية في إنجيل يوحنا،
+      تحت رعاية صاحب النيافة الحبر الجليل <strong>الأنبا مكاريوس</strong>
+      أسقف المنيا وتوابعها ورئيس دير الأم سارة.
+    </p>
+    <div class="hero-cta">
+      <a href="#curriculum" class="btn btn-primary">
+        <span>ابدأ المنهج</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+      </a>
+      <a href="#competitions" class="btn btn-glass">استكشف المسابقات</a>
+    </div>
+    <div class="hero-stats">
+      <div class="hs-item"><strong>8</strong><span>مسابقات</span></div>
+      <div class="hs-sep"></div>
+      <div class="hs-item"><strong>21</strong><span>إصحاح</span></div>
+      <div class="hs-sep"></div>
+      <div class="hs-item"><strong>32</strong><span>حرف قبطي</span></div>
+    </div>
+  </div>
+
+  <div class="hero-visual glass-strong">
+    <div class="hero-visual-glow"></div>
+    <div class="hero-circle">
+      <div class="hero-inner">
+        <span class="hero-num">22</span>
+        <span class="hero-label">المونديال</span>
+      </div>
+    </div>
+    <div class="hero-tags">
+      <span>✝ يوحنا الحبيب</span>
+      <span>📖 إنجيل يوحنا</span>
+      <span>✨ لاهوت المسيح</span>
+    </div>
+  </div>
+
+  <a href="#about" class="scroll-indicator" aria-label="انتقل للأسفل">
+    <span></span>
+  </a>
+</section>
+
+<!-- ===== About ===== -->
+<section id="about" class="section">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-tag">عن المونديال</span>
+      <h2 class="section-title">ما هو مونديال بي مينريت؟</h2>
+      <p class="section-sub">مونديال إعدادي يجمع بين الروح والتعليم والابتكار</p>
+    </div>
+
+    <div class="about-grid">
+      <div class="glass-card reveal">
+        <div class="card-icon">🏛️</div>
+        <h3>الجهة المنظمة</h3>
+        <p>مركز خدمة إعدادي بالمنيا — تحت رعاية صاحب النيافة الحبر الجليل الأنبا مكاريوس أسقف المنيا وتوابعها ورئيس دير الأم سارة، وتحت إشراف أبونا القس توما سمير.</p>
+      </div>
+      <div class="glass-card reveal">
+        <div class="card-icon">🎯</div>
+        <h3>الفئة المستهدفة</h3>
+        <p>فتيان وفتيات إعدادي بجميع الكنائس القبطية الأرثوذكسية على مستوى الإيبارشية، للارتقاء بمستواهم الكنسي السليم.</p>
+      </div>
+      <div class="glass-card reveal">
+        <div class="card-icon">📚</div>
+        <h3>عدد المسابقات</h3>
+        <p>8 مسابقات متنوعة: دراسية، محفوظات، ألحان، إلكترونية وذكاء اصطناعي، فنية، أبحاث، لغة قبطية، وشطرنج.</p>
+      </div>
+      <div class="glass-card reveal">
+        <div class="card-icon">🏅</div>
+        <h3>التكريم</h3>
+        <p>يتم تكريم الفائزين بيد سيدنا الأنبا مكاريوس في نهاية كل مونديال.</p>
+      </div>
+      <div class="glass-card reveal">
+        <div class="card-icon">👥</div>
+        <h3>المشاركة</h3>
+        <p>يحق لكل كنيسة الاشتراك بنفس الأشخاص في أكثر من مسابقة، قيمة الاشتراك بالمونديال عشرون جنيهًا فقط.</p>
+      </div>
+      <div class="glass-card reveal">
+        <div class="card-icon">📅</div>
+        <h3>موعد التسجيل</h3>
+        <p>ترسل الأسماء بالاشتراكات في موعد أقصاه 10 أغسطس 2026 بكنيسة مارمرقس بالمنيا (ريسبشن المطرانية).</p>
+      </div>
+    </div>
+
+    <!-- Theme Card -->
+    <div class="theme-card glass-strong reveal">
+      <div class="theme-glow"></div>
+      <span class="section-tag">موضوع 2026</span>
+      <h3 class="theme-title">القديس يوحنا الحبيب وإثبات لاهوت السيد المسيح</h3>
+      <p>رحلة في إنجيل يوحنا: من الكلمة الأزلي، إلى المعجزات، إلى القيامة — لنؤمن أن يسوع هو المسيح ابن الله.</p>
+      <div class="theme-quote">"وَأَمَّا هذِهِ فَقَدْ كُتِبَتْ لِتُؤْمِنُوا أَنَّ يَسُوعَ هُوَ الْمَسِيحُ ابْنُ اللهِ" (يو 20: 31)</div>
+    </div>
+
+    <!-- Timeline -->
+    <div class="timeline-section">
+      <h3 class="sub-title reveal">📜 مسيرة المونديالات السابقة</h3>
+      <p class="sub-desc reveal">قام المركز بعمل 21 مونديال سابق، وكانوا كالآتي:</p>
+      <div class="timeline" id="timeline"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Curriculum ===== -->
+<section id="curriculum" class="section section-alt">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-tag">المنهج الدراسي</span>
+      <h2 class="section-title">رحلتك التعليمية الكاملة</h2>
+      <p class="section-sub">اضغط على أي درس لاستكشاف محتواه التفصيلي كاملًا</p>
+    </div>
+
+    <div class="progress-bar-wrap glass reveal">
+      <div class="progress-label">
+        <span>تقدمك في المنهج</span>
+        <span id="curriculumProgressText">0%</span>
+      </div>
+      <div class="progress-track"><div class="progress-fill" id="curriculumProgress"></div></div>
+    </div>
+
+    <div class="curriculum-grid" id="curriculumGrid"></div>
+  </div>
+</section>
+
+<!-- ===== John Gospel ===== -->
+<section id="john" class="section">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-tag">إنجيل يوحنا</span>
+      <h2 class="section-title">الإصحاحات الواحد والعشرون</h2>
+      <p class="section-sub">تصفح محتوى إنجيل يوحنا حسب ما ورد تفصيلًا في المنهج</p>
+    </div>
+    <div class="chapters-nav glass reveal" id="chaptersNav"></div>
+    <div class="chapter-content glass-strong reveal" id="chapterContent">
+      <div class="chapter-placeholder">
+        <div class="placeholder-icon">📖</div>
+        <p>اختر إصحاحًا من القائمة أعلاه لعرض محتواه</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Competitions ===== -->
+<section id="competitions" class="section section-alt">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-tag">المسابقات</span>
+      <h2 class="section-title">8 مسابقات · رحلة متكاملة</h2>
+      <p class="section-sub">اضغط على أي مسابقة لعرض كل الشروط والتفاصيل الواردة في الملف</p>
+    </div>
+    <div class="comp-grid" id="compGrid"></div>
+  </div>
+</section>
+
+<!-- ===== Coptic ===== -->
+<section id="coptic" class="section">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-tag">اللغة القبطية</span>
+      <h2 class="section-title">الأبجدية القبطية التفاعلية</h2>
+      <p class="section-sub">اضغط على أي حرف لرؤية تفاصيله وقاعدة نطقه · 32 حرفًا بالكامل</p>
+    </div>
+
+    <div class="coptic-tabs glass reveal">
+      <button class="tab-btn active" data-tab="letters">الحروف (32)</button>
+      <button class="tab-btn" data-tab="numbers">الأرقام</button>
+      <button class="tab-btn" data-tab="vocab">المفردات</button>
+      <button class="tab-btn" data-tab="convo">المحادثة</button>
+      <button class="tab-btn" data-tab="syllables">المقاطع</button>
+    </div>
+
+    <div class="coptic-panel glass-strong" id="copticPanel"></div>
+  </div>
+</section>
+
+<!-- ===== Memorization ===== -->
+<section id="memorization" class="section section-alt">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-tag">المحفوظات</span>
+      <h2 class="section-title">تقدمك في الحفظ</h2>
+      <p class="section-sub">علّم ما حفظته لمتابعة تقدمك — يتم حفظ تقدمك تلقائيًا</p>
+    </div>
+    <div class="progress-bar-wrap glass reveal">
+      <div class="progress-label">
+        <span>تقدمك في المحفوظات</span>
+        <span id="memProgressText">0%</span>
+      </div>
+      <div class="progress-track"><div class="progress-fill gold" id="memProgress"></div></div>
+    </div>
+    <div class="mem-grid" id="memGrid"></div>
+  </div>
+</section>
+
+<!-- ===== Dashboard ===== -->
+<section id="dashboard" class="section">
+  <div class="container">
+    <div class="dashboard glass-strong reveal">
+      <div class="dash-header">
+        <div>
+          <h2>مرحبًا 👋</h2>
+          <p>أكمل رحلتك في مونديال بي مينريت</p>
+        </div>
+        <button class="btn btn-primary" id="continueBtn">متابعة التعلم</button>
+      </div>
+      <div class="dash-grid">
+        <div class="dash-stat">
+          <div class="stat-circle" id="statCircle1"><span>0%</span></div>
+          <p>إنجاز المنهج</p>
+        </div>
+        <div class="dash-stat">
+          <div class="stat-num" id="statCompleted">0</div>
+          <p>دروس مكتملة</p>
+        </div>
+        <div class="dash-stat">
+          <div class="stat-num" id="statMem">0%</div>
+          <p>المحفوظات</p>
+        </div>
+        <div class="dash-stat">
+          <div class="stat-num" id="statComps">0</div>
+          <p>مسابقات مستكشفة</p>
+        </div>
+      </div>
+      <div class="dash-last glass">
+        <span>آخر موضوع تمت قراءته:</span>
+        <strong id="lastTopic">—</strong>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Sources ===== -->
+<section id="sources" class="section section-alt">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-tag">المصادر</span>
+      <h2 class="section-title">مصادر المحتوى</h2>
+    </div>
+    <div class="glass-card reveal">
+      <p>جميع المحتوى الدراسي المعروض في هذا الموقع مأخوذ من ملف <strong>«مونديال بي مينريت صيف 2026»</strong> الرسمي الصادر عن مركز خدمة إعدادي بالمنيا، تحت رعاية صاحب النيافة الحبر الجليل الأنبا مكاريوس.</p>
+      <div class="sources-contact">
+        <span>📞 01205635782</span>
+        <span>📘 فيس بوك: مركز خدمة إعدادي بالمنيا</span>
+        <span>📍 كنيسة مارمرقس بالمنيا</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Footer ===== -->
+<footer class="footer">
+  <div class="container">
+    <p class="footer-main">✝ مونديال بي مينريت صيف 2026 — مركز خدمة إعدادي بالمنيا</p>
+    <p class="footer-sub">Developed By: Arsany Moftah</p>
+  </div>
+</footer>
+
+<!-- ===== Modal ===== -->
+<div class="modal-overlay" id="modalOverlay">
+  <div class="modal glass-strong" id="modal">
+    <button class="modal-close" id="modalClose">✕</button>
+    <div id="modalBody" class="modal-body"></div>
+  </div>
+</div>
+
+<!-- ===== Bottom Nav ===== -->
+<nav class="bottom-nav glass-strong" id="bottomNav">
+  <a href="#hero" class="bn-item active"><span>🏠</span><small>الرئيسية</small></a>
+  <a href="#curriculum" class="bn-item"><span>📚</span><small>المنهج</small></a>
+  <a href="#competitions" class="bn-item"><span>🏆</span><small>المسابقات</small></a>
+  <a href="#coptic" class="bn-item"><span>🔤</span><small>القبطية</small></a>
+  <a href="#dashboard" class="bn-item"><span>📊</span><small>لوحتي</small></a>
+</nav>
+
+<script src="script.js"></script>
+</body>
+</html>
